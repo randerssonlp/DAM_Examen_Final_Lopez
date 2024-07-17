@@ -64,11 +64,6 @@ public class NotaFragment extends Fragment {
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 2) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new StaggeredGridLayoutManager( mColumnCount, StaggeredGridLayoutManager.VERTICAL));
-            }
             notaList = new ArrayList<>();
             notaList.add(new Nota("Trabajo Académico","Las notas del trabajo académico serán  revisadas e ingresadas el día 16 de Julio.", true, android.R.color.holo_blue_light));
             notaList.add(new Nota("Examen Final", "Estudiar para el Examen Final: Caso: Notas Listas, es una réplica de la UC4.",false, android.R.color.holo_green_light));
